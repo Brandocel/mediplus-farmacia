@@ -10,4 +10,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  preview: {
+    // Permite cualquier host externo (Render, Vercel, etc.)
+    allowedHosts: "all",
+    port: Number(process.env.PORT) || 4173,
+    host: true,
+  },
 });
