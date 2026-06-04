@@ -11,9 +11,8 @@ export default defineConfig({
     },
   },
   preview: {
-    // Permite cualquier host externo (Render, Vercel, etc.)
-    allowedHosts: "all",
+    allowedHosts: true,           // true = acepta cualquier host
+    host: "0.0.0.0",              // escucha en todas las interfaces
     port: Number(process.env.PORT) || 4173,
-    host: true,
   },
 });
